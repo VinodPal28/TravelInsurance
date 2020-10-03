@@ -1,0 +1,8 @@
+PolicyNo	ErrorNo	Message
+ATRTAPGE00000004	20158	1 Invalid Travel Plan name - 'Global Explorer Prime Holiday Silver Platinum' entered.
+ATRTAPGE00000005	20158	1 Invalid Travel Plan name - 'Global Explorer Prime Holiday Silver Platinum' entered.
+ATRTASGC00000006	20159	1 Invalid Travel Plan name - 'Global Citizen Prime Holiday Silver' entered.
+ATRTAPGE00000007	20158	1 Invalid Travel Plan name - 'Global Explorer Prime Holiday Silver Platinum' entered.
+ATRTASGC00000008	20159	1 Invalid Travel Plan name - 'Global Citizen Prime Holiday Silver' entered.
+ATRTASGC00000009	20159	1 Invalid Travel Plan name - 'Global Citizen Prime Holiday Silver' entered.
+ATRTAPGE00000010	20158	1 Invalid Travel Plan name - 'Global Explorer Prime Holiday Silver Platinum' entered.

@@ -1,0 +1,237 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+    <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
+    <meta name="author" content="PIXINVENT">
+    <title>Dashboard</title>
+    <link rel="apple-touch-icon" href="../Assets/images/ico/fav-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../Assets/images/ico/fav-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
+        rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="../Assets/css/vendors.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN MODERN CSS-->
+    <link rel="stylesheet" type="text/css" href="../Assets/css/app.css">
+    <!-- END MODERN CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="../Assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/vendors/css/cryptocoins/cryptocoins.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../Assets/css/style.css" />
+    <link href="../Assets/css/Grid_Pagination.css" rel="stylesheet" />
+    <link href="../Assets/css/editor.css" rel="stylesheet" />
+    <!-- END Custom CSS-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar"
+    data-open="click" data-menu="vertical-menu" data-col="2-columns">
+    <!-- fixed-top-->
+    <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light bg-info navbar-shadow">
+        <div class="navbar-wrapper">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav flex-row">
+                    <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" id="brand-logoB" href="index.html">
+                            <img class="brand-logo" alt="modern admin logo" src="../Assets/images/logo/allianz-travel.png">
+                        </a>
+                        <a class="navbar-brand" id="brand-logoS" href="index.html">
+                            <img class="brand-logo" alt="modern admin logo" src="../Assets/images/logo/allianz-travel-icon.png">
+                        </a>
+                    </li>
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="la la-ellipsis-v"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-container content">
+                <div class="collapse navbar-collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav mr-auto float-left">
+                        <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
+                        <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
+
+                        <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#"><i class="ficon ft-search"></i></a>
+                            <div class="search-input">
+                                <input class="input" type="text" placeholder="Explore Modern...">
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav float-right">
+                        <li class="nav-item d-none d-md-block border1 borderComn"><a class="nav-link" href="../Assets/images/sample.pdf" target="_blank">Plan Suite</a></li>
+                        <li class="nav-item d-none d-md-block border2 borderComn"><a class="nav-link" href="faq.aspx">Faq</a></li>
+
+                        <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="mr-1">Hello,
+                             <span class="user-name text-bold-700" runat="server" id="UserName"></span>
+                                </span>
+                                <span class="avatar avatar-online">
+                                    <img src="../Assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" id="MenuWallet" runat="server">
+                                <%--<div runat="server" id="WalletReq"> <a class="dropdown-item" href="../Admin/WalletRequest.aspx"><i class="ft-check-square"></i>Wallet Requests</a></div>
+                               <div runat="server" id="WalletStmt">  <a class="dropdown-item" href="../Admin/WalletStatement.aspx"><i class="ft-check-square"></i>Wallet Statement</a></div>--%>
+                                <a class="dropdown-item" href="../Admin/ChangePassword.aspx"><i class="ft-message-square"></i>Change Password</a>
+                                <%-- <a class="dropdown-item" href="#"><i class="ft-mail"></i>My Inbox</a>
+                                <a class="dropdown-item" href="#"><i class="ft-check-square"></i>Task</a>
+                                <a class="dropdown-item" href="#"><i class="ft-message-square"></i>Chats</a>--%>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../Default.aspx"><i class="ft-power"></i>Logout</a>
+                            </div>
+                        </li>
+
+                        <%-- start Notification --%>
+                        <li class="dropdown dropdown-notification nav-item">
+                            <a  class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i>
+                                <span runat="server" id="DivCount" class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow"><span runat="server" id="Count"></span> </span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                <li class="dropdown-menu-header">
+                                    <h6 class="dropdown-header m-0">
+                                        <span class="grey darken-2">Notifications</span>
+                                    </h6>
+                                   <%-- <span class="notification-tag badge badge-default badge-danger float-right m-0">5 New</span>--%>
+                                </li>
+
+                                <li class="scrollable-container media-list w-100" runat="server" id="DivBindNotification">
+
+                                 <%--  <a href="javascript:void(0)" runat="server" id="Notification1">
+                                        <div class="media">--%>
+                                           <%-- <div class="media-left align-self-center"><i class="ft-plus-square icon-bg-circle bg-cyan"></i></div>--%>
+                                           <%-- <div class="media-body">
+                                                <h6 class="media-heading">You have new order!</h6>
+                                                <p class="notification-text font-small-3 text-muted">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                <small>
+                                                    <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">30 minutes ago</time>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </a>--%>
+                                                                    
+                                </li>
+
+                                <%--<li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all notifications</a></li>--%>
+                                <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="/Admin/Notification.aspx">Read all notifications</a></li>
+                            </ul>
+                        </li>
+                        <%-- End Notification --%>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main_menu_navigation" runat="server" data-menu="menu-navigation">
+                <%-- <li class=" nav-item"><a href="../Admin/Dashboard.aspx"><i class="la la-home"></i><span class="menu-title" data-i18n="nav.dash.main">Dashboard</span></a>
+                </li>
+
+                <li class=" nav-item"><a href="../Admin/UserCreation.aspx"><i class="la la-support"></i><span class="menu-title" data-i18n="nav.support_raise_support.main">User Creation</span></a>
+                </li>
+                <li class=" nav-item"><a href="manage-users.html"><i class="la la-support"></i><span class="menu-title" data-i18n="nav.support_raise_support.main">Manage Users</span></a>
+                </li>
+
+                <li class=" nav-item"><a href="javascript:void(0);"><i class="la la-support"></i><span class="menu-title" data-i18n="nav.dash.main">Masters</span></a>
+                    <ul class="menu-content">
+                        <li><a class="menu-item" href="PlanMaster.aspx" data-i18n="nav.dash.ecommerce">Plan Master</a></li>
+                        <li><a class="menu-item" href="manage-plans.html" data-i18n="nav.dash.sales">Manage Plans</a></li>
+                        <li><a class="menu-item" href="../Admin/GeographyMaster.aspx" data-i18n="nav.dash.sales">Geography Master</a></li>
+                        <li><a class="menu-item active" href="age-group-master.html" data-i18n="nav.dash.sales">Age Group Master</a></li>
+                        <li><a class="menu-item" href="benefits-master.html" data-i18n="nav.dash.sales">Benefits Master</a></li>
+                        <li><a class="menu-item" href="value-added-service-master.html" data-i18n="nav.dash.sales">Value Added Service Master</a></li>
+                        <li><a class="menu-item" href="insurer-master.html" data-i18n="nav.dash.sales">Insurer Master</a></li>
+                        <li><a class="menu-item" href="sum-insured-master.html" data-i18n="nav.dash.sales">Sum Insured Master</a></li>
+                        <li><a class="menu-item" href="incentive-master.html" data-i18n="nav.dash.sales">Incentive Master</a></li>
+                        <li><a class="menu-item" href="tax-slab-master.html" data-i18n="nav.dash.sales">Tax Slab Master</a></li>
+                        <!-- <li><a class="menu-item" href="content-management.html" data-i18n="nav.dash.sales">Content Management</a></li> -->
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="partner-registration-requests.html"><i class="la la-support"></i>
+                        <span class="menu-title" data-i18n="nav.support_documentation.main">Partner Registration Requests</span>
+                    </a>
+                </li>
+               <li class=" nav-item">
+                    <a href="../Admin/WalletReqApproval.aspx"><i class="la la-support"></i>
+                        <span class="menu-title" data-i18n="nav.support_documentation.main">Wallet Requests</span>
+                    </a>
+                </li>
+   
+                <li class="nav-item">
+                    <a href="reports.html"><i class="la la-support"></i>
+                        <span class="menu-title" data-i18n="nav.support_documentation.main">Reports</span>
+                    </a>
+                </li>--%>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div style="min-height: 656px;">
+        <div class="wrapper-content">
+            <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <%-- <footer class="footer footer-static footer-light navbar-border navbar-shadow text-center">
+        Copyright &copy; 2018 <a href="http://evolutionco.com" target="_blank">EvolutionCo</a>. All rights reserved.
+    </footer>--%>
+    <footer class="footer footer-static footer-light navbar-border navbar-shadow text-center">
+        <div>Copyright &copy; 2018 <a href="http://evolutionco.com" target="_blank">EvolutionCo</a>. All rights reserved.</div>
+        <div style="margin-left: 77%; margin-top: -2%; background-color: #ff6a00"><a style="text-align: right"><span class="user-name text-bold-500">Last Login : </span><span id="lastlogin" runat="server" class="user-name text-bold-700"></span></a></div>
+    </footer>
+    <script src="../Assets/js/jquery.min.js"></script>
+    <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>--%>
+    <script src="../Assets/js/scripts/bs.pagination.js"></script>
+    <!-- BEGIN VENDOR JS-->
+    <script src="../Assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="../Assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
+    <script src="../Assets/vendors/js/charts/echarts/echarts.js" type="text/javascript"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN MODERN JS-->
+    <script src="../Assets/js/core/app-menu.js" type="text/javascript"></script>
+    <script src="../Assets/js/core/app.js" type="text/javascript"></script>
+    <script src="../Assets/js/scripts/customizer.js" type="text/javascript"></script>
+    <!-- END MODERN JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="../Assets/js/scripts/pages/dashboard-crypto.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL JS-->
+    <script src="../Assets/js/bootstrap.min.js"></script>
+    <%--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--%>
+    <%--  <script src="../Scripts/jquery-1.10.2.min.js"></script>
+     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>--%>
+    <script src="../Assets/js/jquery.multiselect.js" type="text/javascript"></script>
+    <script src="../Assets/js/Valid.js"></script>
+    <%-- <script src="../Assets/js/PreventRightClick.js"></script>--%>
+    <script src="../Assets/js/editor.js"></script>
+   <%-- <script src="../Assets/js/jquery.disableAutoFill.js"></script>
+    <script src="../Assets/js/jquery.disableAutoFill.min.js"></script>--%>
+</body>
+</html>

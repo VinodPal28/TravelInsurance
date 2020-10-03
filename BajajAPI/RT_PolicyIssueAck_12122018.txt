@@ -1,0 +1,4 @@
+PolicyNo	ErrorNo	Message
+ATRTAPGE00000001	4	Invalid User Id/Password
+ATRTASGT00000002	4	Invalid User Id/Password
+ATRTAPGE00000003	4	Invalid User Id/Password

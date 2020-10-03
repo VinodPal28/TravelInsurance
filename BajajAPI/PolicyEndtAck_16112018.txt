@@ -1,0 +1,12 @@
+PolicyNo	ErrorNo	MessagePolicyNo	ErrorNo	Message
+ATRTAGGC00000002	0	Policy Schengen successfully inserted
+ATRTAGGC00000003	0	Policy Schengen successfully inserted
+ATRTAGGC00000006	0	Policy Schengen successfully inserted
+ATRTAGGC00000007	0	Policy Schengen successfully inserted
+ATRTAGGC00000009	0	Policy Schengen successfully inserted
+ATRTAGGC00000010	0	Policy Schengen successfully inserted
+ATRTAGGC00000011	0	Policy Schengen successfully inserted
+ATRTAGGE00000001	0	Policy Schengen successfully inserted
+BARTAPIG00000004	0	Policy Schengen successfully inserted
+BARTAPIG00000005	0	Policy Schengen successfully inserted
+BARTAPIG00000008	0	Policy Schengen successfully inserted

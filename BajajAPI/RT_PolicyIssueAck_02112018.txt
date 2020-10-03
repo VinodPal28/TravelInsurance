@@ -1,0 +1,3 @@
+PolicyNo	ErrorNo	Message
+ATRTAGGC00000007	20089	Invalid Travel Plan name - 'Global Citizen Prime Holiday Gold' entered.
+BARTAPIG00000008	19531	Error Occured in weo_travel_util.weo_trv_compute_premium_new Service TaxORA-20000: Applicable Tax rates not found : Pincode Not Present in pincode master.

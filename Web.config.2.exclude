@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <handlers>
+      <remove name="ChartImageHandler"/>
+      <add name="ChartImageHandler" preCondition="integratedMode" verb="GET,HEAD,POST" path="ChartImg.axd" type="System.Web.UI.DataVisualization.Charting.ChartHttpHandler, System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+    </handlers>
+  </system.webServer>
+  <system.web>
+    
+     <httpHandlers>
+      <add path="ChartImg.axd" verb="GET,HEAD,POST" type="System.Web.UI.DataVisualization.Charting.ChartHttpHandler, System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false"/>
+    </httpHandlers>
+    <compilation debug="true" targetFramework="4.5" batch="false" />
+    <httpRuntime targetFramework="4.5" />
+    <!--<customErrors mode="On"  defaultRedirect="~/Home.aspx" redirectMode="ResponseRedirect">
+      <error statusCode="401" redirect="~/Erroe_404.aspx"/>
+      <error statusCode="403" redirect="~/Erroe_404.aspx"/>
+      <error statusCode="404" redirect="~/Erroe_404.aspx"/>
+    </customErrors>-->
+ <customErrors mode="Off" />
+    <pages>
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI.DataVisualization.Charting" assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <add tagPrefix="ajaxToolkit" assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" />
+      </controls>
+    </pages>
+  </system.web>
+
+
+  <appSettings>
+     <add key="ChartImageHandler" value="storage=file;timeout=20;dir=c:\TempImageFiles\;"/>
+    <add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
+    <add key="DirectoryPath" value="LDAP://192.168.1.136" />
+    <add key="DirectoryDomain" value="ECO1" />
+    <add key="virtualpath" value="http://183.87.127.174:9595/Admin/" />
+    <add key="virtualpathHome" value="http://183.87.127.174:81/" />
+
+    <!--<add key="virtualpathHome" value="localhost:27584/"/>-->
+
+    <add key="frommail" value="support@evolutionco.com" />
+    <!--<add key="frommail" value="Customercareroadtrips@allianz.com"/>-->
+    <add key="MERCHANT_KEY" value="rjQUPktU" />
+    <add key="SALT" value="e5iIg1jwi8" />
+    <add key="PAYU_BASE_URL" value="https://test.payu.in" />
+
+    <!--<add key="PAYU_BASE_URL" value="https://secure.payu.in/"/>-->
+    <add key="action" value="" />
+    <add key="hashSequence" value="key|txnid|amount|productinfo|firstname|email|udf1|udf2|udf3|udf4|udf5|udf6|udf7|udf8|udf9|udf10" />
+  </appSettings>
+
+  <connectionStrings>
+    <add name="Allianz_DBConnectionString" connectionString="Data Source=DESKTOP-86JE7TP;Initial Catalog=TravelInsurance;integrated security=true" providerName="System.Data.SqlClient" />
+    <add name="Allianz_DBConnectionString_Unity" connectionString="Data Source=DESKTOP-86JE7TP;Initial Catalog=TravelInsurance;integrated security=true" providerName="System.Data.SqlClient" />
+    <!--<add name="Allianz_DBConnectionString" connectionString="Data Source=192.168.1.200;Initial Catalog=Hyundai_B2B2C_Dev1;Persist Security Info=True;User ID=eco_sql;Password=ecosql1234" providerName="System.Data.SqlClient" />
+	 <add name="Allianz_DBConnectionString_Unity" connectionString="Data Source=192.168.1.200;Initial Catalog=Hyundai_B2B2C_Dev1;Persist Security Info=True;User ID=eco_sql;Password=ecosql1234" providerName="System.Data.SqlClient" />-->
+   
+  </connectionStrings>
+  <system.webServer>
+    <directoryBrowse enabled="false" />
+    <defaultDocument enabled="true">
+      <files>
+                <clear />
+                <add value="Login.aspx" />
+                <add value="ForgotPassword.aspx" />
+      </files>
+    </defaultDocument>
+        <staticContent>
+            <clientCache cacheControlMode="NoControl" httpExpires="Thu, 28 Nov 2019 00:00:00 GMT" />
+        </staticContent>
+
+    <!--<httpErrors errorMode="Custom" defaultResponseMode="ExecuteURL">
+       <remove statusCode="404" subStatusCode="-1" /> 
+       <error statusCode="404" path="/Erroe_404.aspx" responseMode="ExecuteURL" />
+      <remove statusCode="403" subStatusCode="-1" /> 
+       <error statusCode="403" path="/Erroe_404.aspx" responseMode="ExecuteURL" />  
+    
+      </httpErrors>-->
+  </system.webServer>
+
+  <system.net>
+    <mailSettings>
+      <smtp from="aditi@evolutioco.com">
+        <network host="smtp.gmail.com" password="password@1234" port="587" />
+      </smtp>
+    </mailSettings>
+  </system.net>
+
+  <!--<add name="Allianz_DBConnectionString" connectionString="Server=ECOWS-155\\SQLEXPRESS;Database=Allianz;Trusted_Connection=Yes;" ></add>-->
+</configuration>

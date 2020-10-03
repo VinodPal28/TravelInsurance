@@ -1,0 +1,4 @@
+PolicyNo	ErrorNo	Message
+ATRTAPGE00000012	4	Invalid User Id/Password
+ATRTAPGE00000013	20059	Exception in bjaz_authenticate_user 
+ATRTAGGE00000014	20059	Exception in bjaz_authenticate_user 
